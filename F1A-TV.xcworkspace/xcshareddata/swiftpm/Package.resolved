@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": "master",
+          "revision": "65b77694905b0dea7e419b2f74b1e5dc037094b5",
+          "version": null
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": "master",
+          "revision": "c874e5ef178a65b6a2b6a04d5981652d4fa95e22",
+          "version": null
+        }
+      },
+      {
+        "package": "SkeletonView",
+        "repositoryURL": "https://github.com/Juanpe/SkeletonView.git",
+        "state": {
+          "branch": "main",
+          "revision": "f3cc8f0aba521cc769ef014666ae37954ab4ff0b",
+          "version": null
+        }
+      },
+      {
+        "package": "SPAlert",
+        "repositoryURL": "https://github.com/NoahFetz/SPAlert.git",
+        "state": {
+          "branch": "tvOS",
+          "revision": "93bb4df089e6a85ef76f0d5876385e3283ba38e3",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

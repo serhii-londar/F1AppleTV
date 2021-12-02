@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import CrowdinSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let names = UIFont.fontNames(forFamilyName: family)
             print("Family: \(family) Font names: \(names)")
         }*/
+        
+        let distributionHash = "45fd13151631ca1a0563bb8106i"
+        let sourceLanguage = "en"
+        
+        let crowdinProviderConfig = CrowdinProviderConfig(hashString: distributionHash,
+                                                          sourceLanguage: sourceLanguage)
+
+        let crowdinSDKConfig = CrowdinSDKConfig.config().with(crowdinProviderConfig: crowdinProviderConfig)
+        
+        CrowdinSDK.startWithConfig(crowdinSDKConfig, completion: {
+            print("Finished Setup")
+        })
+        // Now new log message comes as callback
+        CrowdinSDK.setOnLogCallback { logMessage in
+            print("LOG MESSAGE - \(logMessage)")
+        }
         
         return true
     }

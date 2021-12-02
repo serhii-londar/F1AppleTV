@@ -1,0 +1,41 @@
+PODS:
+  - BaseAPI (0.2.0)
+  - CrowdinSDK (1.3.0):
+    - CrowdinSDK/Core (= 1.3.0)
+    - CrowdinSDK/CrowdinProvider (= 1.3.0)
+  - CrowdinSDK/Core (1.3.0)
+  - CrowdinSDK/CrowdinAPI (1.3.0):
+    - BaseAPI (~> 0.2.0)
+    - CrowdinSDK/Core
+    - Starscream (~> 3.1.0)
+  - CrowdinSDK/CrowdinProvider (1.3.0):
+    - CrowdinSDK/Core
+    - CrowdinSDK/CrowdinAPI
+  - Starscream (3.1.1)
+
+DEPENDENCIES:
+  - CrowdinSDK (from `https://github.com/crowdin/mobile-sdk-ios.git`, branch `tvOS-support`)
+
+SPEC REPOS:
+  trunk:
+    - BaseAPI
+    - Starscream
+
+EXTERNAL SOURCES:
+  CrowdinSDK:
+    :branch: tvOS-support
+    :git: https://github.com/crowdin/mobile-sdk-ios.git
+
+CHECKOUT OPTIONS:
+  CrowdinSDK:
+    :commit: 2f0e7e8c4933f45b2da0895ce8212d88211fbde8
+    :git: https://github.com/crowdin/mobile-sdk-ios.git
+
+SPEC CHECKSUMS:
+  BaseAPI: 4f0d1ef6d80428f75d54fdc716f6f02103c04eb1
+  CrowdinSDK: 0e848e9c4083bfa0f756fcc80557609f23cd55a7
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+
+PODFILE CHECKSUM: a4e2ffa7ee198218632ede71f69b01a73bcdcecf
+
+COCOAPODS: 1.11.2
