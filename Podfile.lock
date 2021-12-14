@@ -1,14 +1,14 @@
 PODS:
   - BaseAPI (0.2.0)
-  - CrowdinSDK (1.3.0):
-    - CrowdinSDK/Core (= 1.3.0)
-    - CrowdinSDK/CrowdinProvider (= 1.3.0)
-  - CrowdinSDK/Core (1.3.0)
-  - CrowdinSDK/CrowdinAPI (1.3.0):
+  - CrowdinSDK (1.3.1):
+    - CrowdinSDK/Core (= 1.3.1)
+    - CrowdinSDK/CrowdinProvider (= 1.3.1)
+  - CrowdinSDK/Core (1.3.1)
+  - CrowdinSDK/CrowdinAPI (1.3.1):
     - BaseAPI (~> 0.2.0)
     - CrowdinSDK/Core
     - Starscream (~> 3.1.0)
-  - CrowdinSDK/CrowdinProvider (1.3.0):
+  - CrowdinSDK/CrowdinProvider (1.3.1):
     - CrowdinSDK/Core
     - CrowdinSDK/CrowdinAPI
   - Starscream (3.1.1)
@@ -28,12 +28,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CrowdinSDK:
-    :commit: 2f0e7e8c4933f45b2da0895ce8212d88211fbde8
+    :commit: bf30e1ed83c52e0f630651912015cb503331c43f
     :git: https://github.com/crowdin/mobile-sdk-ios.git
 
 SPEC CHECKSUMS:
   BaseAPI: 4f0d1ef6d80428f75d54fdc716f6f02103c04eb1
-  CrowdinSDK: 0e848e9c4083bfa0f756fcc80557609f23cd55a7
+  CrowdinSDK: b6d8b266adc2497e22e640af9d3be99b8af4b7ca
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
 PODFILE CHECKSUM: a4e2ffa7ee198218632ede71f69b01a73bcdcecf
