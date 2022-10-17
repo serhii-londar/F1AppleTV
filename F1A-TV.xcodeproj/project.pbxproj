@@ -154,7 +154,7 @@
 		1BF95A3F25EFAE3300A7C7C6 /* UserInteractionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF95A3E25EFAE3300A7C7C6 /* UserInteractionHelper.swift */; };
 		1BFED8F5262443FA00540511 /* PlayerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFED8F4262443FA00540511 /* PlayerSettings.swift */; };
 		1BFFAB7825F901C600EADC99 /* SeriesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFFAB7725F901C600EADC99 /* SeriesType.swift */; };
-		5C6EED5DE73C5780C40A1622 /* Pods_F1A_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B0B947F86308E70404A18D /* Pods_F1A_TV.framework */; };
+		E81DA9C828E6F2A9001A74AC /* CrowdinSDK in Frameworks */ = {isa = PBXBuildFile; productRef = E81DA9C728E6F2A9001A74AC /* CrowdinSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -166,6 +166,16 @@
 			files = (
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E85C4A5627863B1400E8063B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -322,9 +332,8 @@
 		1BF95A3E25EFAE3300A7C7C6 /* UserInteractionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractionHelper.swift; sourceTree = "<group>"; };
 		1BFED8F4262443FA00540511 /* PlayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
 		1BFFAB7725F901C600EADC99 /* SeriesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesType.swift; sourceTree = "<group>"; };
-		6967B12D1D7E0D8A8F8D1FF5 /* Pods-F1A-TV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F1A-TV.release.xcconfig"; path = "Target Support Files/Pods-F1A-TV/Pods-F1A-TV.release.xcconfig"; sourceTree = "<group>"; };
-		A6B0B947F86308E70404A18D /* Pods_F1A_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_F1A_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C16A6824730E4EC03F0EEE57 /* Pods-F1A-TV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-F1A-TV.debug.xcconfig"; path = "Target Support Files/Pods-F1A-TV/Pods-F1A-TV.debug.xcconfig"; sourceTree = "<group>"; };
+		E81DA9C628E6F239001A74AC /* mobile-sdk-ios */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "mobile-sdk-ios"; path = "../mobile-sdk-ios"; sourceTree = "<group>"; };
+		E85C4A6F27863BA100E8063B /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,10 +343,10 @@
 			files = (
 				1B3A52D7267E9D91007199E3 /* SPAlert in Frameworks */,
 				1B3493242626E2A300AB2C3F /* Alamofire in Frameworks */,
+				E81DA9C828E6F2A9001A74AC /* CrowdinSDK in Frameworks */,
 				1BB23CFF2544E8D200D0CC71 /* Kingfisher in Frameworks */,
 				1BA077492545FA4E00C4C426 /* TVServices.framework in Frameworks */,
 				1B3A52D4267E9CDE007199E3 /* SkeletonView in Frameworks */,
-				5C6EED5DE73C5780C40A1622 /* Pods_F1A_TV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				1BA077482545FA4E00C4C426 /* TVServices.framework */,
-				A6B0B947F86308E70404A18D /* Pods_F1A_TV.framework */,
+				E85C4A6F27863BA100E8063B /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -516,10 +525,10 @@
 		1BB29B8525445D6C00ECC074 = {
 			isa = PBXGroup;
 			children = (
+				E81DA9C528E6F239001A74AC /* Packages */,
 				1BB29B9025445D6C00ECC074 /* F1A-TV */,
 				1BB29B8F25445D6C00ECC074 /* Products */,
 				188309F9CE9671FEA1E5B358 /* Frameworks */,
-				4F4E15880FEAAA48C3A1E9DC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -786,13 +795,12 @@
 			path = TvOSSlider;
 			sourceTree = "<group>";
 		};
-		4F4E15880FEAAA48C3A1E9DC /* Pods */ = {
+		E81DA9C528E6F239001A74AC /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				C16A6824730E4EC03F0EEE57 /* Pods-F1A-TV.debug.xcconfig */,
-				6967B12D1D7E0D8A8F8D1FF5 /* Pods-F1A-TV.release.xcconfig */,
+				E81DA9C628E6F239001A74AC /* mobile-sdk-ios */,
 			);
-			path = Pods;
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -802,12 +810,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BB29BB925445D6F00ECC074 /* Build configuration list for PBXNativeTarget "F1A-TV" */;
 			buildPhases = (
-				7BDD96EC553E6330027E6696 /* [CP] Check Pods Manifest.lock */,
 				1BB29B8A25445D6C00ECC074 /* Sources */,
 				1BB29B8B25445D6C00ECC074 /* Frameworks */,
 				1BB29B8C25445D6C00ECC074 /* Resources */,
 				1BB23CF02544E3A100D0CC71 /* Embed Frameworks */,
-				1763F23E9E932D0D0DDEBF02 /* [CP] Embed Pods Frameworks */,
+				E85C4A5627863B1400E8063B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -819,6 +826,7 @@
 				1B3493232626E2A300AB2C3F /* Alamofire */,
 				1B3A52D3267E9CDE007199E3 /* SkeletonView */,
 				1B3A52D6267E9D91007199E3 /* SPAlert */,
+				E81DA9C728E6F2A9001A74AC /* CrowdinSDK */,
 			);
 			productName = "F1TV";
 			productReference = 1BB29B8E25445D6C00ECC074 /* F1A-TV.app */;
@@ -830,7 +838,7 @@
 		1BB29B8625445D6C00ECC074 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					1BB29B8D25445D6C00ECC074 = {
@@ -854,10 +862,10 @@
 			);
 			mainGroup = 1BB29B8525445D6C00ECC074;
 			packageReferences = (
-				1BB23CFD2544E8D200D0CC71 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
-				1B3493222626E2A300AB2C3F /* XCRemoteSwiftPackageReference "Alamofire.git" */,
-				1B3A52D2267E9CDE007199E3 /* XCRemoteSwiftPackageReference "SkeletonView.git" */,
-				1B3A52D5267E9D91007199E3 /* XCRemoteSwiftPackageReference "SPAlert.git" */,
+				1BB23CFD2544E8D200D0CC71 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1B3493222626E2A300AB2C3F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1B3A52D2267E9CDE007199E3 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				1B3A52D5267E9D91007199E3 /* XCRemoteSwiftPackageReference "SPAlert" */,
 			);
 			productRefGroup = 1BB29B8F25445D6C00ECC074 /* Products */;
 			projectDirPath = "";
@@ -907,48 +915,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1763F23E9E932D0D0DDEBF02 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-F1A-TV/Pods-F1A-TV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-F1A-TV/Pods-F1A-TV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-F1A-TV/Pods-F1A-TV-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BDD96EC553E6330027E6696 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-F1A-TV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BB29B8A25445D6C00ECC074 /* Sources */ = {
@@ -1225,8 +1191,8 @@
 		};
 		1BB29BBA25445D6F00ECC074 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C16A6824730E4EC03F0EEE57 /* Pods-F1A-TV.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -1253,8 +1219,8 @@
 		};
 		1BB29BBB25445D6F00ECC074 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6967B12D1D7E0D8A8F8D1FF5 /* Pods-F1A-TV.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -1302,7 +1268,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1B3493222626E2A300AB2C3F /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		1B3493222626E2A300AB2C3F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1310,7 +1276,7 @@
 				kind = branch;
 			};
 		};
-		1B3A52D2267E9CDE007199E3 /* XCRemoteSwiftPackageReference "SkeletonView.git" */ = {
+		1B3A52D2267E9CDE007199E3 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
 			requirement = {
@@ -1318,7 +1284,7 @@
 				kind = branch;
 			};
 		};
-		1B3A52D5267E9D91007199E3 /* XCRemoteSwiftPackageReference "SPAlert.git" */ = {
+		1B3A52D5267E9D91007199E3 /* XCRemoteSwiftPackageReference "SPAlert" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/NoahFetz/SPAlert.git";
 			requirement = {
@@ -1326,7 +1292,7 @@
 				kind = branch;
 			};
 		};
-		1BB23CFD2544E8D200D0CC71 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		1BB23CFD2544E8D200D0CC71 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1339,23 +1305,27 @@
 /* Begin XCSwiftPackageProductDependency section */
 		1B3493232626E2A300AB2C3F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1B3493222626E2A300AB2C3F /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 1B3493222626E2A300AB2C3F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		1B3A52D3267E9CDE007199E3 /* SkeletonView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1B3A52D2267E9CDE007199E3 /* XCRemoteSwiftPackageReference "SkeletonView.git" */;
+			package = 1B3A52D2267E9CDE007199E3 /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
 		};
 		1B3A52D6267E9D91007199E3 /* SPAlert */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1B3A52D5267E9D91007199E3 /* XCRemoteSwiftPackageReference "SPAlert.git" */;
+			package = 1B3A52D5267E9D91007199E3 /* XCRemoteSwiftPackageReference "SPAlert" */;
 			productName = SPAlert;
 		};
 		1BB23CFE2544E8D200D0CC71 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1BB23CFD2544E8D200D0CC71 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = 1BB23CFD2544E8D200D0CC71 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		E81DA9C728E6F2A9001A74AC /* CrowdinSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CrowdinSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 
